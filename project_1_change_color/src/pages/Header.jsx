@@ -16,7 +16,7 @@ colors.forEach((color) =>
     <button
       type="button"
       key={color}
-      className="bg-cyan-400 bg-opacity-50 m-3 p-2 rounded hover:underline"
+      className="bg-cyan-400 m-3 p-2 rounded hover:underline"
     >
       {color}
     </button>
@@ -28,12 +28,17 @@ function changeColor(e) {
 }
 const Header = () => {
   return (
-    <div
-      onClick={changeColor}
-      className=" flex justify-between items-center max-w-6xl mx-auto p-3"
-    >
-      {elements}
-    </div>
+    <>
+      <h3 className="text-center p-2 bg-gray-500">
+        select your backgroundColor
+      </h3>
+      <div
+        onClick={changeColor}
+        className=" flex justify-between items-center max-w-6xl mx-auto p-3 bg-rose-600 shadow-2xl opacity-90"
+      >
+        {elements}
+      </div>
+    </>
   );
 };
 
